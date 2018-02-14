@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head>
+
+		<script
+			src="http://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"></script>
+
+
 		<style>
 			body{
 				background-color: #eee;
+			}
+			.title_container {
+				text-align: center;
 			}
 			.footer {
 			    position:absolute;
@@ -11,26 +21,89 @@
 			    right:0;
 			    margin:5px;
 			    color:#ccc;
-			    font-size:0.5em;
+			    font-size:1em;
+			}
+			.left-footer {
+			    position:absolute;
+			    bottom:0;
+			    left:0;
+			    margin:5px;
+			    color:#ccc;
+			    font-size:1em;
 			}
 			.name {
-				text-align: center;
+				
 				font-family: Georgia;
 				margin-top: 40vh;
 				font-size:4em;
 				font-weight: bold;
 			}
 			.work-title {
-				text-align: center;
 				color: #3498db;
 				font-size:2em;
 			}
+			.clock-face {
+				font-family: Arial;
+			}
 		</style>
-
 	</head>
 	<body>
-	<div class="name">Shane Exterkamp</div>
-	<div class="work-title">Software Engineer</div>
-	<span class="footer">Made with love by Shane</span>
+		<script>
+
+			function update(){
+			  var date = new Date();
+			  
+			  var ampm = date.getHours() < 12
+			             ? 'AM'
+			             : 'PM';
+			  
+			  var hours = date.getHours() == 0
+			              ? 12
+			              : date.getHours() > 12
+			                ? date.getHours() - 12
+			                : date.getHours();
+			  
+			  var minutes = date.getMinutes() < 10 
+			                ? '0' + date.getMinutes() 
+			                : date.getMinutes();
+			  
+			  var seconds = date.getSeconds() < 10 
+			                ? '0' + date.getSeconds() 
+			                : date.getSeconds();
+			  
+			  // $dOut.text(dateString);
+			  $('#hours').text(hours);
+			  $('#minutes').text(minutes);
+			  $('#seconds').text(seconds);
+			  $('#ampm').text(ampm);
+			}
+
+			$(document).ready(function(){
+				
+				//var $dOut = $('#date'),
+	    		// var	$hOut = $('#hours'),
+				   //  $mOut = $('#minutes');
+			    // $sOut = $('#seconds'),
+			    // $ampmOut = $('#ampm');
+
+				update();
+				window.setInterval(update, 1000)
+			});
+		</script>
+		<div class="title_container">
+			
+			<div class="name">Shane Exterkamp</div>
+			<div class="work-title">Software Engineer</div>
+		</div>
+		<span class="footer">Made with love by Shane</span>
+		<div class="left-footer">
+				<span id="hours"></span>
+				<span>:</span>
+				<span id="minutes"></span>
+				<span>.</span>
+				<span id="seconds"></span>
+				<span> </span>
+				<span id="ampm"></span>
+			</div>
 	</body>
 </html>
