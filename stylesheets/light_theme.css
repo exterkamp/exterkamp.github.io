@@ -1,15 +1,23 @@
 body{
-	background-color: #f2f8ff;
+	background-color: #ecf0f1;
 }
 .navbar {
-	background-color: #e2f0ff;
+	background-color: #dee6e8;
+}
+.navbar-button {
+	color: #717677;
+	background-color: #dee6e8;
 }
 .work-title {
-	color: #3498db;
+	color: #717677;
 }
 .card-footer {
 	background-color: #fff;
 }
+.card-footer-button {
+	color: #000;
+	background-color: #fff;
+}
 .footer {
-    color:#c7d6e8;
+    color:#c4ccce;
 }

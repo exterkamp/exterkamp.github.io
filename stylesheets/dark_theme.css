@@ -1,0 +1,33 @@
+body{
+	background-color: #403e42;
+}
+.navbar {
+	background-color: #28262b;
+}
+.navbar-brand {
+	color: #c4ccce!important;
+}
+.navbar-button {
+	color: #c4ccce;
+	background-color: #28262b;
+}
+.name {
+	color: #e9e8ea;
+}
+.work-title {
+	color: #717677;
+}
+.card {
+	color: #e9e8ea;
+	background-color: #28262b;
+}
+.card-footer {
+	background-color: #28262b;
+}
+.card-footer-button {
+	color: #e9e8ea;
+	background-color: #28262b
+}
+.footer {
+    color:#c4ccce;
+}
