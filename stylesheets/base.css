@@ -1,0 +1,20 @@
+.title_container {
+	text-align: center;
+}
+.name {
+	font-family: Georgia;
+	font-size:4em;
+	font-weight: bold;
+}
+.work-title {
+	font-size:2em;
+}
+.clock-face {
+	font-family: Arial;
+}
+.navbar {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.12);
+}
+.card {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
