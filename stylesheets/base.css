@@ -1,7 +1,13 @@
+body {
+	background-color: #e9f0f5;
+	color: #7f8c97;
+}
+
 .title_container {
 	text-align: center;
 }
 .name {
+	color: #2c3e50;
 	font-family: Georgia;
 	font-size:4em;
 	font-weight: bold;
@@ -18,6 +24,15 @@
 .card {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.card-block {
+	margin: 10px;
+}
+
+header {
+  background-color: #ecf0f1;
+}
+
+
 .footer {
     margin:5px;
     font-size:1em;
@@ -29,15 +44,6 @@
 
 ::-webkit-scrollbar { 
     display: none; 
-}
-
-.social-media-icons ul {
-	position: absolute;
-	bottom: 0px;
-	overflow: auto;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
 }
 
 .social-media-icons ul li {
@@ -79,4 +85,32 @@
 .fa-github {
     background-color:#6e5494;
     color: white;
+}
+
+@media only screen and (max-width: 1600px) {
+	.scroll-helper-text {
+		-webkit-animation-name: leave;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-fill-mode: forwards;
+	} 
+	@-webkit-keyframes leave {  
+		0% { opacity: 1.0;}
+		100% { opacity: 0.0;}
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	.scroll-helper-text {
+		-webkit-animation-name: return;
+		-webkit-animation-duration: 1s;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: 1;
+		-webkit-animation-fill-mode: forwards;
+	} 
+	@-webkit-keyframes return {  
+		0% { opacity: 0.0;}
+		100% { opacity: 1.0;}
+	}
 }
