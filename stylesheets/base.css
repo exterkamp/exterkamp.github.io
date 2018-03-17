@@ -15,15 +15,17 @@ body {
 .work-title {
 	font-size:2em;
 }
-.clock-face {
-	font-family: Arial;
-}
-.navbar {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.12);
-}
-.card {
+.md-shadow {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+.flat-shadow {
+	box-shadow: 0 3px 0 #d7e4ed;
+}
+
+.card {
+	border: 0px;
+}
+
 .card-block {
 	margin: 10px;
 }
@@ -60,6 +62,10 @@ header {
 	text-align: center;
 	margin-right: 10px;
 	padding-top: 15%;
+}
+
+.fa {
+	color: #7f8c97;
 }
 
 .fa:hover {
