@@ -18,26 +18,14 @@
 
       	<title>Shane and his code.</title>
 
-      	<link type="text/css" rel="stylesheet" href="stylesheets/base.css" />
-      	<link type="text/css" rel="stylesheet" href="stylesheets/light_theme.css" id="theme-css"/>
+      	<link type="text/css" rel="stylesheet" href="stylesheets/style.css" />
+      	<link type="text/css" rel="stylesheet" href="stylesheets/main.css" id="theme-css"/>
 
       	<link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
-      	
-
-		<link type="text/css" rel="stylesheet" href="static/vendor/CodyHouse/css/reset.css">
-      	<link type="text/css" rel="stylesheet" href="static/vendor/CodyHouse/css/style.css">
-      	<link type="text/css" rel="stylesheet" href="static/vendor/CodyHouse/css/demo.css">
-
 	</head>
-	<body>
-		<!-- Name container -->
-		<header>
-			<img src="https://s3.amazonaws.com/public-photos-exterkamp-codes/small_headshot.jpg" alt="headshot" height="200" width="200" style="border-radius: 50%; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)">
-			<div class="name">Shane Exterkamp</div>
-			<div class="work-title">Software Engineer</div>
-		</header>
-		
+	<body>	
+
 		<!-- link skip button script -->
 		<script>
 			$(document).ready(function(){
@@ -50,40 +38,85 @@
 
 
 		</script>
-
-		<!-- link cards -->
-		<div class="container" style="margin-top: 50px;">
-			<div class="card-deck">
-				<div class="col-3"></div>
-				<div class="card col-3 flat-shadow" style="text-align: center">
-					<div class="card-body">
-						<h5>Portfolio.</h5>
-					</div>
-					<div class="card-footer border-0">
-						<a class="btn card-footer-button" href='art.html'><i class="fa fa-2x fa-paint-brush" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<div class="card col-3 flat-shadow" style="text-align: center">
-					<div class="card-body">
-						<h5>Résumé Explorer.</h5>
-					</div>
-					<div class="card-footer border-0">
-						<a class="btn card-footer-button" id="contact-scroller" href="resume.html"><i class="fa fa-2x fa-download" aria-hidden="true"></i></i></a>
-					</div>
-				</div>
-				<div class="col-3"></div>
+		
+		<!-- <header>
+			<div id="cd-nav">
+			      <ul>
+			      	 <li><a class="button" id="contact-scroller" style="cursor: pointer;">Contact</a></li>
+			      	 <li><a href="art.html">Art</a></li>
+			         <li><a href="#0">Projects</a></li>
+			         <li><a href="resume.html">Career</a></li>
+			         <li style="float: left;"><a id="nav-brand" href="">Shane Exterkamp</a></li>
+			      </ul>
 			</div>
-		</div>
+		</header> -->
+		<main>
+			<!-- Title content -->
+			<div class="container" id="title-container">
+				<!-- Name container -->
+				<img src="https://s3.amazonaws.com/public-photos-exterkamp-codes/small_headshot.jpg" alt="headshot" height="200" width="200" id="portrait">
+				<div class="name">Shane Exterkamp</div>
+				<div class="work-title slide" style="text-align: center;">
+					<span class="cd-words-wrapper">
+						<b class="is-visible">Software Enginner</b>
+						<b>Artist</b>
+						<b>Graphic Designer</b>
+						<b>Tinkerer</b>
+						<b>Disc Golfer</b>
+					</span>
+				</div>
+				<!-- Link buttons -->
+				<!-- <div class="container" style="text-align: center;margin-top: 30px;">
+					<div class="col-3"></div>
+					<button class="btn md-shadow col-2" style="margin: 10px;">Career</button>
+					<button class="btn md-shadow col-2" style="margin: 10px;">Projects</button>
+					<button class="btn md-shadow col-2" style="margin: 10px;">Art</button>
+					<div class="col-3"></div>
+				</div> -->
+			</div>
+
+			
+
+			<!-- About me -->
+			<div>
+				<div class="container"  style="margin-top:20px;">
+					<h1>A little About Me</h1>
+					<p style="font-size: 1.3em;">
+						I am a software engineer that lives in Tampa, Florida.  In 2016 I graduated from the University of Florida with a Bachelors in Computer Science.  I work with all kinds of technology, but my specialty, if I have one, is in cloud native applications and User Experience design.
+						<br>
+						In the past I have worked with Python, Java, AWS, C#, Flask, Django, Spring, Ansible, Docker, Javascript, Swagger, SQL/NoSQL DB's and a lot more.  I love to learn new tech and revel in the opportunity to dive into something new.  Sometimes I even get into hardware and have been known to play with Raspberry Pi's and fire up the ol' soldering iron; that usually lasts until I burn myself the third time...
+						<br>
+						Outside of software I am an errant artist.  I specialize in graphite and dabble in acrylic.  When I'm not playing with tech I am probably drawing, painting or photographing something.
+						<br>
+						<br>
+						If you want to talk I'd love to get to know you.  Feel free to reach out to me however you feel most comfortable.  
+					</p>
+				</div>
+			</div>
+
+			<!-- About the site -->
+			<!-- <div class="container">
+				<div>
+					<h1>Exterkamp.codes</h1>
+					<p></p>
+				</div>
+			</div> -->
+
+		</main>
+
+		
 
 		<!-- Contact icons -->
-		<div class="social-media-icons" id="contact-container" style="position: absolute; bottom: 3%;right: 1%;">
-			<ul style="float: right">
+		<div class="social-media-icons container" id="contact-container">
+			<ul>
 				<li><a href="http://facebook.com/shane.exterkamp"><i class="fa fa-facebook fa-3x"></i></a></li>
 				<li><a href="http://linkedin.com/in/shane-exterkamp"><i class="fa fa-linkedin fa-3x"></i></a></li>
 				<li><a href="http://github.com/exterkamps"><i class="fa fa-github fa-3x"></i></a></li>
 				<li><a href="mailto:shaneexterkamp5@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
 			</ul>
 		</div>
+
+	<script src="js/scroll_title.js" type="text/javascript"></script>
 
 	</body>
 </html>
