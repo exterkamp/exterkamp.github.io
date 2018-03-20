@@ -1,23 +1,8 @@
-body{
-	background-color: #ecf0f1;
+body {
+	background-color: #e9f0f5;
+	color: #7f8c97;
 }
-.navbar {
-	background-color: #dee6e8;
-}
-.navbar-button {
-	color: #717677;
-	background-color: #dee6e8;
-}
-.work-title {
-	color: #717677;
-}
-.card-footer {
-	background-color: #fff;
-}
-.card-footer-button {
-	color: #000;
-	background-color: #fff;
-}
-.footer {
-    color:#c4ccce;
+
+.name {
+	color: #2c3e50;
 }

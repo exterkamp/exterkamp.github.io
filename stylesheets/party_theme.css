@@ -1,0 +1,15 @@
+body {
+	background-color: #fd79a8;
+	color: #ffeaa7;
+}
+
+.name {
+	color: #1289A7;
+}
+
+.fa-facebook, .fa-envelope, .fa-linkedin, .fa-github {
+    background: #ffeaa7;
+    color: #fd79a8;
+}
+
+
