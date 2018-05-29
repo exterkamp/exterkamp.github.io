@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import '../styles/Splash.css';
 import headshot from '../static/img/edited_2.jpg'
 import Social from './Social';
+import TextLoop from 'react-text-loop';
 // import { css, withStyles } from './withStyles';
 
 class Splash extends Component {
@@ -10,7 +11,15 @@ class Splash extends Component {
             <div className="Splash">
                 <img className="Splash-Headshot paper" src={headshot} alt="Portrait" />
                 <div className="Splash-Name">Shane Exterkamp</div>
-                <div className="Splash-Title">Software Engineer</div>
+                <TextLoop springConfig={{stiffness: 210, damping: 20}}>
+                    <span className="Splash-Title">Software Engineer</span>
+                    <span className="Splash-Title">Artist</span>
+                    <span className="Splash-Title">Tinkerer</span>
+                    <span className="Splash-Title">Python Packager</span>
+                    <span className="Splash-Title">Graphic Designer</span>
+                    <span className="Splash-Title">Photographer</span>
+                </TextLoop>
+                {/* <div className="Splash-Title">Software Engineer</div> */}
                 
                 <div className="Splash-Content">
                     <div className="Splash-Content-Title">A Little About Me</div>
