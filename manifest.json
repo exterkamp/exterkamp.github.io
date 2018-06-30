@@ -1,6 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Shane's Site",
+  "name": "Shane Exterkamp's homepage!",
+  "description":"Shane Exterkamp's homepage, with some fun info about him!  Feel free to look around.",
+  "dir": "ltr",
+  "lang": "en-US",
+  ​​"orientation": "portrait-primary",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +14,6 @@
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e0e6e7",
+  "background_color": "#e0e6e7"
 }
