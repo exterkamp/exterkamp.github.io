@@ -1,0 +1,15 @@
+.paper {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.site-content {
+    display: flex;
+}
+
+.site-content.formal {
+    background-color: rgb(224, 230, 231);
+}
+
+.site-content.party {
+    background-color: rgb(255, 210, 251);
+}
