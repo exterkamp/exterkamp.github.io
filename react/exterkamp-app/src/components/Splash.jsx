@@ -1,41 +1,120 @@
 import React, {Component} from 'react';
 import '../styles/Splash.css';
-import headshot from '../static/img/edited_2.jpg'
-import Social from './Social';
+import headshot from '../static/img/edited_2.jpg';
+import party_headshot from '../static/img/portrait_party.jpg';
+import olympus from '../static/img/OLYMPUS_macro.jpg';
+
 import TextLoop from 'react-text-loop';
-// import { css, withStyles } from './withStyles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+import {
+    faFacebook,
+    faGithub,
+    faLinkedinIn,
+  } from "@fortawesome/fontawesome-free-brands";
 
 class Splash extends Component {
+    
     render() {
+        const hero_titles = 
+            [
+                "Software Engineer",
+                "Artist",
+                "Python Packager",
+                "Docker Developer",
+                "Tinkerer",
+                "Graphic Designer",
+                "Java Jouster",
+                "Photographer"
+            ];
+        const hero_color = (this.props.theme === 'formal')? '#2c3e50': '#1289A7';
+
         return (
-            <div className="Splash">
-                <img className="Splash-Headshot paper" src={headshot} alt="Portrait" />
-                <div className="Splash-Name">Shane Exterkamp</div>
-                <TextLoop springConfig={{stiffness: 210, damping: 20}}>
-                    <span className="Splash-Title">Software Engineer</span>
-                    <span className="Splash-Title">Artist</span>
-                    <span className="Splash-Title">Tinkerer</span>
-                    <span className="Splash-Title">Python Packager</span>
-                    <span className="Splash-Title">Graphic Designer</span>
-                    <span className="Splash-Title">Photographer</span>
-                </TextLoop>
-                {/* <div className="Splash-Title">Software Engineer</div> */}
-                
-                <div className="Splash-Content">
-                    <div className="Splash-Content-Title">A Little About Me</div>
-                    I am a software engineer that lives in Tampa, Florida. In 2016 I graduated from the University of Florida with a Bachelors in Computer Science. I work with all kinds of technology, but my specialty, if I have one, is in cloud native applications and User Experience design.
-                    <br /> 
-                    In the past I have worked with Python, Java, AWS, C#, Flask, Django, Spring, Ansible, Docker, Javascript, Swagger, SQL/NoSQL DB's and a lot more. I love to learn new tech and revel in the opportunity to dive into something new. Sometimes I even get into hardware and have been known to play with Raspberry Pi's and fire up the ol' soldering iron; that usually lasts until I burn myself the third time...
-                    <br /> 
-                    Outside of software I am an errant artist. I specialize in graphite and dabble in acrylic. When I'm not playing with tech I am probably drawing, painting or photographing something. 
-                    <br />
-                    <br />
-                    If you want to talk I'd love to get to know you. Feel free to reach out to me however you feel most comfortable.
+            <div className={"splash " + this.props.theme}>
+                <div className="hero-content">
+                    <img className="headshot paper" src={(this.props.theme === 'formal')? headshot : party_headshot} alt="Portrait" onClick={() => this.props.themeSwitch()}/>
+                    <div className={"Splash-Name " + this.props.theme}>Shane Exterkamp</div>
+                    <div style={{'position':'absolute', 'left':'0','width':'100%'}}>
+                        <TextLoop springConfig={{stiffness: 210, damping: 20}} 
+                            children={hero_titles} 
+                            style={{'font-family': 'Georgia',
+                                'font-style': 'italic',
+                                'font-size': '2em',
+                                'font-weight': 'bold',
+                                'color': hero_color}}>
+                        </TextLoop>
+                    </div>
                 </div>
-                <footer className="Splash-Footer">
-                    <Social />
-                </footer>
+                <div className="about">
+                    <div className="about-me">
+                        <div className="about-me-title">
+                            Hello 👋 I'm Shane.  I build software.
+                        </div>
+                        <div className="about-me-content">
+                            <p>
+                                I got a degree in Computer Science from the University of Florida, Go Gators! While I was there I met a lot of great people
+                                and built a lot of fun things!  I was happy to go to a few UF Hackathons i.e. <i>Swamp Hacks</i>!  I focused a lot on Java
+                                in school and also did some android development way back on KitKat.  I also got to work with a really cool 
+                                company <a target="_target" href="https://www.infotechfl.com">InfoTech</a> for my Senior Project with 
+                                the <a target="_target" href="http://www.ippd.ufl.edu/">IPPD</a> program where I got my first taste of the cloud.
+                            </p>
+                            <p>
+                                After graduating I started working at <a target="_target" href="http://nielsen.com">Nielsen</a>.  I have worked in Research 
+                                and Development, US Television Audience Measurement and Enterprise Core Technology.  This exposure to so many areas has given 
+                                me a very large breadth of experience in technology and moved me away from Java centric development to work in Python, 
+                                Javascript, Ansible, React, Angular, Redux, on AWS, Azure and GCP!  
+                            </p>
+                            <p>
+                                I am just starting in my career as a software developer, and I am always looking for the next thing to learn and
+                                do to make tech everywhere better!
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className="about-photos">
+                            <img src={olympus} style={{'width':'30%','min-width':'300px','float':'left', 'margin-right':'1rem',}}/>
+                            <div>
+                                {/* <p style={{'text-align':'center', 'font-size': '2.5rem'}}>
+                                    📷 🖌 🎮 🏂
+                                </p> */}
+                                <p>
+                                    Outside of making software I enjoy expressing my creative side.  I love photography, both digitally and on 35mm.  To the
+                                    left is my Olympus OM-2S!  I'm still new to developing my own film, but it is addictive and I am doing it more and more in
+                                    addition to shooting digital.
+                                </p>
+                                <p>
+                                    I also sometimes paint in acrylic and watercolor.  When not feeling colorful I draw in graphite and occasionally in ink.
+                                </p>
+                                <p>
+                                    In addition, I game on PC, read books, play disc golf, and snowboard!
+                                </p>
+                            
+
+                                
+                            </div>
+                        
+                    </div>
+                    <div className="about-contact">
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href="mailto:shane@exterkamp.codes">
+                            <FontAwesomeIcon icon={faEnvelope} />
+                        </a>
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href="https://github.com/exterkamps">
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shane-exterkamp">
+                            <FontAwesomeIcon icon={faLinkedinIn} />
+                        </a>
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href="http://facebook.com/shane.exterkamp">
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                    </div>
+                </div>
+                <div className="footer">
+                    Handcrafted with ❤ by Shane
+                </div>
             </div>
+            
         );
     }
 }

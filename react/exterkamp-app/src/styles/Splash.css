@@ -1,5 +1,32 @@
-.Splash {
+.splash {
     text-align: center;
+    font-family: sans-serif;
+    width: 100%;
+    height: 70%;
+    z-index: 1;
+}
+
+.splash::after {
+    content: '';
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: #fdfdfd; */
+    /* background: url("../static/img/cranes.jpg") 75% center;
+    background-size: cover;      
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover; */
+    /* opacity: 0.75; */
+  }
+
+.hero-content {
+    margin: 7rem;
+    margin-top:3rem;
 }
 
 .Splash-Content-Title {
@@ -8,12 +35,44 @@
 }
 
 .Splash-Content {
-    width: 70%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     font-size: 1.3em;
-    
     text-align: left;
+}
+
+.about {
+    background-color: white;
+    padding-left:3rem;
+    padding-right:3rem;
+    font-size: 1.4rem;
+    text-align: left;
+    overflow:auto; 
+}
+
+
+.about-me-title {
+    
+    padding: 3rem;
+    font-size: 3.4rem;
+    /* margin: 4em; */
+}
+
+.about-contact {
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.Splash-Content.formal { 
+    background-color: #e9f0f5;
+    color: #7f8c97;
+}
+
+.Splash-Content.party {
+    background-color: #fd79a8;
+    color: #ffeaa7;
 }
 
 .Splash-Footer {
@@ -23,23 +82,49 @@
 }
 
 .Splash-Name {
-    color: #2c3e50;
     font-family: Georgia;
     font-size: 4em;
     font-weight: bold;
 }
 
+.Splash-Name.formal {
+    color: #2c3e50;
+}
+
+.Splash-Name.party {
+    color: #1289A7;
+}
+
 .Splash-Title {
-    color: #7f8c97;
+    /* color: #7f8c97; */
     font-family: Georgia;
     font-style: italic;
     font-size: 2em;
     font-weight: bold;
 }
 
-.Splash-Headshot {
+.headshot {
     margin: 20px;
-    max-width: 200px;
+    max-width: 250px;
     border-radius: 50%;
+    transition: all 0.1s ease;
+}
+
+.headshot:hover {
+    transform: rotate(10deg);
+    cursor: pointer;
     
+}
+
+.icon {
+    margin: 0.5rem;
+    border-radius: 50%;
+    padding: 7px;
+    color: rgb(126, 126, 126)
+}
+
+.footer {
+    text-align: right;
+    padding: 1rem;
+    color: rgba(0, 0, 0, 0.5);    
 }
