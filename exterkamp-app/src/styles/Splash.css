@@ -47,7 +47,9 @@
 
 .about-me-title {
     
-    padding: 3rem;
+    /* padding: 3rem; */
+    padding-top:3rem;
+    padding-bottom: 3rem;
     font-size: 3.4rem;
     /* margin: 4em; */
 }
@@ -131,5 +133,15 @@
 
     .Splash-Name {
         font-size: 2em;
+    }
+
+    .headshot {
+        max-width: 150px;
+    }
+
+    .about-me-title {
+        font-size: 2rem;
+        padding-top:1.2rem;
+        padding-bottom: 1.2rem;
     }
 }

@@ -35,7 +35,7 @@ class Splash extends Component {
                 <div className="hero-content">
                     <img className="headshot paper" src={(this.props.theme === 'formal')? headshot : party_headshot} alt="Portrait" onClick={() => this.props.themeSwitch()}/>
                     <div className={"Splash-Name " + this.props.theme}>Shane Exterkamp</div>
-                    <div style={{'position':'absolute', 'left':'0','width':'100%','font-family': 'Georgia',
+                    <div className="hero-subtitle" style={{'position':'absolute', 'left':'0','width':'100%','font-family': 'Georgia',
                                 'font-style': 'italic',
                                 'font-size': '2em',
                                 'font-weight': 'bold',
