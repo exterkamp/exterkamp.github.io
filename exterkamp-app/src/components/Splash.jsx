@@ -106,7 +106,7 @@ class Splash extends Component {
                     </div>
                 </div>
                 <div className="footer">
-                    Handcrafted with ❤ by Shane
+                    Handcrafted with <span role="img" aria-label="Love" alt="" >❤</span> by Shane
                 </div>
             </div>
             
