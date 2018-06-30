@@ -15,13 +15,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    /* background-color: #fdfdfd; */
-    /* background: url("../static/img/cranes.jpg") 75% center;
-    background-size: cover;      
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    /* opacity: 0.75; */
   }
 
 .hero-content {
@@ -127,4 +120,16 @@
     text-align: right;
     padding: 1rem;
     color: rgba(0, 0, 0, 0.5);    
+}
+
+@media screen and (max-width: 544px) {
+    .hero-content {
+        
+        margin:0;
+        margin-bottom: 3rem;
+    }
+
+    .Splash-Name {
+        font-size: 2em;
+    }
 }

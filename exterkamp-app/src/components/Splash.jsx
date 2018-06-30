@@ -35,14 +35,14 @@ class Splash extends Component {
                 <div className="hero-content">
                     <img className="headshot paper" src={(this.props.theme === 'formal')? headshot : party_headshot} alt="Portrait" onClick={() => this.props.themeSwitch()}/>
                     <div className={"Splash-Name " + this.props.theme}>Shane Exterkamp</div>
-                    <div style={{'position':'absolute', 'left':'0','width':'100%'}}>
-                        <TextLoop springConfig={{stiffness: 210, damping: 20}} 
-                            children={hero_titles} 
-                            style={{'font-family': 'Georgia',
+                    <div style={{'position':'absolute', 'left':'0','width':'100%','font-family': 'Georgia',
                                 'font-style': 'italic',
                                 'font-size': '2em',
                                 'font-weight': 'bold',
                                 'color': hero_color}}>
+                        <TextLoop springConfig={{stiffness: 210, damping: 20}} 
+                            children={hero_titles} 
+                            >
                         </TextLoop>
                     </div>
                 </div>
