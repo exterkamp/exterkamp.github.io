@@ -28,18 +28,13 @@ class Splash extends Component {
                 "Java Jouster",
                 "Photographer"
             ];
-        const hero_color = (this.props.theme === 'formal')? '#2c3e50': '#1289A7';
 
         return (
             <div className={"splash " + this.props.theme}>
                 <div className="hero-content">
                     <img className="headshot paper" src={(this.props.theme === 'formal')? headshot : party_headshot} alt="Portrait" onClick={() => this.props.themeSwitch()}/>
                     <div className={"Splash-Name " + this.props.theme}>Shane Exterkamp</div>
-                    <div className="hero-subtitle" style={{'position':'absolute', 'left':'0','width':'100%','font-family': 'Georgia',
-                                'font-style': 'italic',
-                                'font-size': '2em',
-                                'font-weight': 'bold',
-                                'color': hero_color}}>
+                    <div className={"hero-subtitle " + this.props.theme}>
                         <TextLoop springConfig={{stiffness: 210, damping: 20}} 
                             children={hero_titles} 
                             >
@@ -49,7 +44,7 @@ class Splash extends Component {
                 <div className="about">
                     <div className="about-me">
                         <div className="about-me-title">
-                            Hello 👋 I'm Shane.  I build software.
+                            Hello <span role="img" aria-label="Hello" alt="">👋</span> I'm Shane.  I build software.
                         </div>
                         <div className="about-me-content">
                             <p>
@@ -73,7 +68,7 @@ class Splash extends Component {
                         </div>
                     </div>
                     <div className="about-photos">
-                            <img src={olympus} style={{'width':'30%','min-width':'300px','float':'left', 'margin-right':'1rem',}}/>
+                            <img className="camera-photo" alt="" src={olympus}/>
                             <div>
                                 {/* <p style={{'text-align':'center', 'font-size': '2.5rem'}}>
                                     📷 🖌 🎮 🏂

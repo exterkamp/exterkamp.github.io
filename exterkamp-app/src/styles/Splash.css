@@ -22,6 +22,16 @@
     margin-top:3rem;
 }
 
+.hero-subtitle {
+    position:absolute;
+    left:0;
+    width:100%;
+    font-family: Georgia;
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .Splash-Content-Title {
     text-align: left;
     font-size: 2.5rem;
@@ -54,6 +64,13 @@
     /* margin: 4em; */
 }
 
+.camera-photo {
+    width:30%;
+    min-width: 200px;
+    float:left;
+    margin-right:1rem;
+}
+
 .about-contact {
     text-align: center;
     padding: 0.5rem;
@@ -82,11 +99,11 @@
     font-weight: bold;
 }
 
-.Splash-Name.formal {
+.Splash-Name.formal, .hero-subtitle.formal {
     color: #2c3e50;
 }
 
-.Splash-Name.party {
+.Splash-Name.party, .hero-subtitle.party {
     color: #1289A7;
 }
 
@@ -105,10 +122,14 @@
     transition: all 0.1s ease;
 }
 
-.headshot:hover {
+/* .headshot:hover {
     transform: rotate(10deg);
     cursor: pointer;
-    
+} */
+
+.headshot:active {
+    transform: rotate(10deg);
+    cursor: pointer;
 }
 
 .icon {
@@ -143,5 +164,13 @@
         font-size: 2rem;
         padding-top:1.2rem;
         padding-bottom: 1.2rem;
+    }
+
+    .camera-photo {
+        width:100%;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
     }
 }

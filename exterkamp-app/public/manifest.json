@@ -1,6 +1,10 @@
 {
-  "short_name": "Exterkamp Codes",
-  "name": "Shane Exterkamp Codes",
+  "short_name": "Shane's Site",
+  "name": "Shane Exterkamp's homepage!",
+  "description":"Shane Exterkamp's homepage, with some fun info about him!  Feel free to look around.",
+  "dir": "ltr",
+  "lang": "en-US",
+  ​​"orientation": "portrait-primary",
   "icons": [
     {
       "src": "favicon.ico",
