@@ -54,7 +54,6 @@
     overflow:auto; 
 }
 
-
 .about-me-title {
     
     /* padding: 3rem; */
@@ -62,6 +61,27 @@
     padding-bottom: 3rem;
     font-size: 3.4rem;
     /* margin: 4em; */
+}
+
+.professional {
+    background-color: white;
+    padding-left:3rem;
+    padding-right:3rem;
+    font-size: 1.4rem;
+    
+    overflow:auto; 
+}
+
+.professional-title {
+    /* background-color: rgb(235, 244, 255); */
+    /* text-align: right; */
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2.4rem;
+}
+
+.professional-content {
+    text-align: left;
 }
 
 .camera-photo {
@@ -73,8 +93,9 @@
 
 .about-contact {
     text-align: center;
+    padding-top: 0;
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 2.7rem;
 }
 
 .Splash-Content.formal { 
@@ -166,6 +187,12 @@
         padding-bottom: 1.2rem;
     }
 
+    .professional-title {
+        font-size: 2rem;
+        padding-top:1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
     .camera-photo {
         width:100%;
     }
@@ -176,5 +203,9 @@
 
     .about {
         font-size: 1rem;
+    }
+
+    .about-contact {
+        font-size: 2rem;
     }
 }

@@ -3,6 +3,7 @@ import '../styles/Splash.css';
 import headshot from '../static/img/edited_2.jpg';
 import party_headshot from '../static/img/portrait_party.jpg';
 import olympus from '../static/img/OLYMPUS_macro.jpg';
+import resume from '../static/Resume_2018_v5.pdf';
 
 import TextLoop from 'react-text-loop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -62,7 +63,8 @@ class Splash extends Component {
                             </p>
                             <p>
                                 I am just starting in my career as a software developer, and I am always looking for the next thing to learn and
-                                do to make tech everywhere better!
+                                do to make tech everywhere better!  If this little summary of my work history wasn't enough, I have a <a target="_target" href={resume}>
+                                résumé</a> if that's your cup of tea.
                             </p>
 
                         </div>
@@ -84,11 +86,13 @@ class Splash extends Component {
                                 <p>
                                     In addition, I game on PC, read books, play disc golf, and snowboard!
                                 </p>
-                            
-
+                            </div>
+                    </div>
                                 
                             </div>
-                        
+                <div className="professional">
+                    <div className="professional-title">
+                        Wanna talk <span role="img" aria-label="Phone" alt="">📞</span>?  I'd love to!
                     </div>
                     <div className="about-contact">
                         <a className="icon" target="_blank" rel="noopener noreferrer" href="mailto:shane@exterkamp.codes">
