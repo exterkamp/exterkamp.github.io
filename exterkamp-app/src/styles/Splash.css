@@ -63,6 +63,15 @@
     /* margin: 4em; */
 }
 
+.things-title {
+    
+    /* padding: 3rem; */
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    font-size: 3.4rem;
+    /* margin: 4em; */
+}
+
 .professional {
     background-color: white;
     padding-left:3rem;
@@ -87,6 +96,7 @@
 .camera-photo {
     width:30%;
     min-width: 200px;
+    max-width: 350px;
     float:left;
     margin-right:1rem;
 }
@@ -185,6 +195,12 @@
         font-size: 2rem;
         padding-top:1.2rem;
         padding-bottom: 1.2rem;
+    }
+
+    .things-title {
+        font-size: 2rem;
+        padding-top:0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .professional-title {
