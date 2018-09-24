@@ -111,7 +111,7 @@ class Splash extends Component {
                         <a className="icon" target="_blank" rel="noopener noreferrer" href="mailto:shane@exterkamp.codes">
                             <FontAwesomeIcon icon={faEnvelope} />
                         </a>
-                        <a className="icon" target="_blank" rel="noopener noreferrer" href="https://github.com/exterkamps">
+                        <a className="icon" target="_blank" rel="noopener noreferrer" href="https://github.com/exterkamp">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
                         <a className="icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shane-exterkamp">
