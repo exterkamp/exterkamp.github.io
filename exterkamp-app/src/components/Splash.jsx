@@ -3,7 +3,7 @@ import '../styles/Splash.css';
 import headshot from '../static/img/edited_2.jpg';
 import party_headshot from '../static/img/portrait_party.jpg';
 // import olympus from '../static/img/OLYMPUS_macro.jpg';
-import resume from '../static/Resume_2018_v5.pdf';
+import resume from '../static/Resume_2018_v6.pdf';
 import hiking from '../static/img/hiking_shane.jpg';
 
 import TextLoop from 'react-text-loop';
@@ -65,7 +65,11 @@ class Splash extends Component {
                                 and Development, US Television Audience Measurement, Enterprise Core Technology, and Enterprise Cloud Operations.  This exposure to 
                                 so many areas has given me a very large breadth of experience in technology and moved me away from Java centric development to work 
                                 in Python, Javascript, Ansible, React, Angular, Redux, on AWS, Azure and GCP!  It also exposed me to a lot of great people who taught
-                                me a lot about how to be a better software engineer and corporate citizen.  
+                                me a lot about how to be a better software engineer and corporate citizen.
+                                <br /><br />
+                                I work now at <a target="_target" href="http://google.com">Google</a> on the Google Chrome Developer Tools team.  I focus mainly on 
+                                making the web better with the <a target="_targer" href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> auditing tool.  I
+                                am still new to Google, but I am excited to see where it takes me and see what I can do to make the world of web browsing a better place!  
                                 <br /><br />
                                 As with every software engineer I am committed to a life of learning and evovling my skills.  I hope it was interesting to read about
                                 my experiences so far, and I hope that it only gets more interesting as time goes on!  If that wasn't enough for you I also have 
