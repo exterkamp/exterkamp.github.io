@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../styles/Splash.css';
-import headshot from '../static/img/headshot_bw.png';
-import party_headshot from '../static/img/portrait_party.png';
+import headshot from '../static/img/headshot_bw.jpeg';
+import party_headshot from '../static/img/portrait_party.jpeg';
 // import olympus from '../static/img/OLYMPUS_macro.jpg';
 import resume from '../static/Resume_2018_v6.pdf';
-import hiking from '../static/img/hiking_shane.png';
+import hiking from '../static/img/hiking_shane.jpeg';
 
 import TextLoop from 'react-text-loop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
