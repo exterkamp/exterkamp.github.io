@@ -4,7 +4,7 @@
   "description":"Shane Exterkamp's homepage, with some fun info about him!  Feel free to look around.",
   "dir": "ltr",
   "lang": "en-US",
-  ​​"orientation": "portrait-primary",
+  "orientation": "portrait-primary",
   "icons": [
     {
       "src": "favicon.ico",
