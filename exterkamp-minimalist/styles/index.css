@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+html {
+    background: #edf1f3;
+    color: rgb(28, 32, 32);;
+    height: 100%;
+    
+}
+
+.hero-header {
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#portrait {
+    max-width: 150px;
+    max-height: 150px;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.goog-blue {
+    color: #4285F4;
+}
+
+.goog-red {
+    color: #DB4437;
+}
+
+.goog-yellow {
+    color: #F4B400;
+}
+
+.goog-green {
+    color: #0F9D58;
+}
+
+.uf-orange {
+    color: #FA4616;
+}
+
+.uf-blue {
+    color: #0021A5;
+}
+
+.hero-text {
+    font-family: Georgia;
+}
+
+.hero-name {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.hero-job {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.content-container {
+    font-size: 1rem;
+    padding: 20px 10%;
+    line-height: 1.25;
+    background-color: #fefefe;
+}
+
+.group-heading {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.icon {
+    font-size: 1.7rem;
+    color: rgb(28, 32, 32);
+    margin: 0 5px;   
+}
+
+.icon-left-border {
+    border: 2px;
+    border-color: #dcdcdc;
+    border-style: none none none solid;
+    padding-left: 5px;
+    margin-left: 0;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right:10px;
+    text-align: right;
+    font-size: 0.8rem;
+}
