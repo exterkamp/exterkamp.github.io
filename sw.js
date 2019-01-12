@@ -1,5 +1,12 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox-sw.js');
 
+// Precaching html, basic css, and portrait.
+workbox.precaching.precacheAndRoute([
+    '/static/styles/index.css',
+    '/static/img/headshot_dithered_transparent.png',
+    { url: '/index.html'},
+]);
+
 // Offline analytics, because why not.
 workbox.googleAnalytics.initialize();
 
