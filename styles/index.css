@@ -29,68 +29,36 @@ main {
     border-radius: 50%;
 }
 
+.history-text {
+    font-size: 19px;
+}
+
 .bold {
     font-weight: bold;
 }
 
 .goog-blue {
-    animation: color-goog-blue 10s forwards;
+    color: #4285F4;
 }
 
 .goog-red {
-    animation: color-goog-red 10s forwards;
+    color: #DB4437;
 }
 
 .goog-yellow {
-    animation: color-goog-yellow 10s forwards;
+    color: #F4B400;
 }
 
 .goog-green {
-    animation: color-goog-green 10s forwards;
-}
-
-@keyframes color-goog-blue {
-    100% {
-        color: #4285F4;
-    }
-}
-
-@keyframes color-goog-red {
-    100% {
-        color: #DB4437;
-    }
-}
-
-@keyframes color-goog-yellow {
-    100% {
-        color: #F4B400;
-    }
-}
-
-@keyframes color-goog-green {
-    100% {
-        color: #0F9D58;
-    }
+    color: #0F9D58;
 }
 
 .uf-orange {
-    animation: color-uf-orange 10s forwards;
+    color: #FA4616;
 }
 
 .uf-blue {
-    animation: color-uf-blue 10s forwards;
-}
-
-@keyframes color-uf-orange {
-    100% {
-        color: #FA4616;
-    }
-}
-
-@keyframes color-uf-blue {
-    100% {
-        color: #0021A5;
-    }
+    color: #0021A5;
 }
 
 .hero-text {
@@ -128,7 +96,7 @@ main {
 
 .icon-left-border {
     border: 2px;
-    border-color: #dcdcdc;
+    border-color: #c2d2da;
     border-style: none none none solid;
     padding-left: 5px;
     margin-left: 0;
@@ -140,6 +108,7 @@ footer {
     right:10px;
     text-align: right;
     font-size: 0.8rem;
+    color: #c2d2da;
 }
 
 @media only screen and (max-width:700px) { 
