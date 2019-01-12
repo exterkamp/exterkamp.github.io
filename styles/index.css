@@ -34,19 +34,19 @@ main {
 }
 
 .goog-blue {
-    animation: color-goog-blue 5s forwards;
+    animation: color-goog-blue 10s forwards;
 }
 
 .goog-red {
-    animation: color-goog-red 5s forwards;
+    animation: color-goog-red 10s forwards;
 }
 
 .goog-yellow {
-    animation: color-goog-yellow 5s forwards;
+    animation: color-goog-yellow 10s forwards;
 }
 
 .goog-green {
-    animation: color-goog-green 5s forwards;
+    animation: color-goog-green 10s forwards;
 }
 
 @keyframes color-goog-blue {
@@ -74,11 +74,11 @@ main {
 }
 
 .uf-orange {
-    animation: color-uf-orange 5s forwards;
+    animation: color-uf-orange 10s forwards;
 }
 
 .uf-blue {
-    animation: color-uf-blue 5s forwards;
+    animation: color-uf-blue 10s forwards;
 }
 
 @keyframes color-uf-orange {
