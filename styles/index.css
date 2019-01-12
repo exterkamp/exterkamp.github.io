@@ -34,27 +34,63 @@ main {
 }
 
 .goog-blue {
-    color: #4285F4;
+    animation: color-goog-blue 5s forwards;
 }
 
 .goog-red {
-    color: #DB4437;
+    animation: color-goog-red 5s forwards;
 }
 
 .goog-yellow {
-    color: #F4B400;
+    animation: color-goog-yellow 5s forwards;
 }
 
 .goog-green {
-    color: #0F9D58;
+    animation: color-goog-green 5s forwards;
+}
+
+@keyframes color-goog-blue {
+    100% {
+        color: #4285F4;
+    }
+}
+
+@keyframes color-goog-red {
+    100% {
+        color: #DB4437;
+    }
+}
+
+@keyframes color-goog-yellow {
+    100% {
+        color: #F4B400;
+    }
+}
+
+@keyframes color-goog-green {
+    100% {
+        color: #0F9D58;
+    }
 }
 
 .uf-orange {
-    color: #FA4616;
+    animation: color-uf-orange 5s forwards;
 }
 
 .uf-blue {
-    color: #0021A5;
+    animation: color-uf-blue 5s forwards;
+}
+
+@keyframes color-uf-orange {
+    100% {
+        color: #FA4616;
+    }
+}
+
+@keyframes color-uf-blue {
+    100% {
+        color: #0021A5;
+    }
 }
 
 .hero-text {
@@ -86,7 +122,8 @@ main {
 .icon {
     font-size: 1.7rem;
     color: rgb(28, 32, 32);
-    margin: 0 5px;   
+    margin: 0 5px;
+    text-decoration: none;
 }
 
 .icon-left-border {
