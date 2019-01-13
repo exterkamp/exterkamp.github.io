@@ -91,9 +91,12 @@
                 if (httpRequest.status === 200) {
                     spotify_json = JSON.parse(httpRequest.responseText)
                     console.log(spotify_json)
-                    document.querySelector('#spotify-header').innerHTML = "Interested in some music?  Here's what I've been listening to right now: ";
-                    for (var idx in spotify_json){
-                        let track = spotify_json[idx]
+                    let update_time = new Date(parseInt(spotify_json['update_time']))
+                        .toLocaleDateString("en-US", {weekday: 'long', hour: 'numeric', minute: 'numeric'});
+                    document.querySelector('#spotify-header').innerHTML =
+                        `Interested in some music?  Here's what I've been listening to right now: <br /> (Updated: ${update_time})`;
+                    for (var idx in spotify_json['tracks']){
+                        let track = spotify_json['tracks'][idx]
                         var t = document.querySelector('#spotify-track');
                         var container = document.querySelector("#spotify-container");
                         var clone = document.importNode(t.content, true);
