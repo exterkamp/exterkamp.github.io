@@ -111,6 +111,28 @@ footer {
     color: #c2d2da;
 }
 
+#spotify-header {
+    margin: 10px;
+    font-size: 12px;
+    color: #95a3ab;
+}
+
+.spotify-track {
+    font-size: 12px;
+    margin: 10px;
+    width: 175px;
+    color: #95a3ab;
+}
+
+.spotify-album-img {
+    height: 150px;
+    width: 150px;
+}
+
+.spotify-song {
+    font-size: 15px;
+}
+
 @media only screen and (max-width:700px) { 
     #portrait {
         max-width: 200px;

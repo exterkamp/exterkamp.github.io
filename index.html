@@ -56,12 +56,23 @@
                 <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shane-exterkamp"><img src="static/svg/linkedin-icon-1.svg" alt="linkedin link"></a>
                 <a class="icon" target="_blank" rel="noopener noreferrer" href="http://facebook.com/shane.exterkamp"><img src="static/svg/facebook-icon-1.svg" alt="facebook link"></a>
             </div>
+            <div id="spotify-header"></div>
+            <div id="spotify-container" style="display:flex;justify-content:center;">
+            </div>
         </main>
         <footer>
             <p>
                 Handcrafted artisanal &#60;/HTML&#62; just for you.
             </p>
         </footer>
+        <template id="spotify-track">
+            <div class="spotify-track">
+                <img class="spotify-album-img" />
+                <p class="spotify-song"></p>
+                <p class="spotify-artist"></p>
+                <p class="spotify-album"></p>
+            </div>
+        </template>
     <script>
         // Check that service workers are registered
         if ('serviceWorker' in navigator) {
@@ -70,6 +81,37 @@
             navigator.serviceWorker.register('/sw.js');
             });
         }
+    </script>
+    <script>
+        // Load in the spotify scripts from app-engine!
+        httpRequest = new XMLHttpRequest();
+        function addSpotifyElements(){
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                // Everything is good, the response was received.
+                if (httpRequest.status === 200) {
+                    spotify_json = JSON.parse(httpRequest.responseText)
+                    console.log(spotify_json)
+                    document.querySelector('#spotify-header').innerHTML = "Interested in some music?  Here's what I've been listening to right now: ";
+                    for (var idx in spotify_json){
+                        let track = spotify_json[idx]
+                        var t = document.querySelector('#spotify-track');
+                        var container = document.querySelector("#spotify-container");
+                        var clone = document.importNode(t.content, true);
+                        clone.querySelector('.spotify-song').innerHTML = track.name
+                        clone.querySelector('.spotify-album').innerHTML = "on: " + track.album
+                        clone.querySelector('.spotify-artist').innerHTML = "by: " + track.artists.map(x => x.name).reduce((x, y) => x + " & " + y)
+                        var albumImg = clone.querySelector('.spotify-album-img');
+                        albumImg.setAttribute("src","data:image/jpg;base64,"+track.album_url);
+                        albumImg.setAttribute("alt","Album cover for: " + track.album);
+                        container.appendChild(clone);
+                    }
+                }
+            }
+        }
+        httpRequest = new XMLHttpRequest();
+        httpRequest.open('GET', 'https://develop-208819.appspot.com/getRecents', true);
+        httpRequest.onreadystatechange = addSpotifyElements;
+        httpRequest.send();
     </script>
     </body>
 </html>
