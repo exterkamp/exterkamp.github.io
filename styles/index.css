@@ -131,6 +131,7 @@ footer {
 
 .spotify-song {
     font-size: 15px;
+    margin: 5px;
 }
 
 @media only screen and (max-width:600px) { 
