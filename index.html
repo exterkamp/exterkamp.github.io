@@ -104,7 +104,7 @@
                         clone.querySelector('.spotify-album').innerHTML = "on: " + track.album
                         clone.querySelector('.spotify-artist').innerHTML = "by: " + track.artists.map(x => x.name).reduce((x, y) => x + " & " + y)
                         var albumImg = clone.querySelector('.spotify-album-img');
-                        albumImg.setAttribute("src","data:image/jpg;base64,"+track.album_url);
+                        albumImg.setAttribute("src","data:image/jpg;base64," + track.album_art_encoded);
                         albumImg.setAttribute("alt","Album cover for: " + track.album);
                         container.appendChild(clone);
                     }
