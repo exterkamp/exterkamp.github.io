@@ -145,6 +145,11 @@ footer {
     position: absolute;
     top:0;
     overflow: hidden;
+    overflow-y: scroll;
+}
+
+.spotify-album-paper::-webkit-scrollbar {
+    width: 0px;
 }
 
 .album-hover-target:hover .spotify-album-img {
