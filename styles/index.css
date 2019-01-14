@@ -146,6 +146,7 @@ footer {
     top:0;
     overflow: hidden;
     overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .spotify-album-paper::-webkit-scrollbar {
