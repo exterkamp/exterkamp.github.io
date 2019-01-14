@@ -122,6 +122,9 @@ footer {
     margin: 10px;
     width: 175px;
     color: #95a3ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .spotify-album-img {
@@ -141,10 +144,7 @@ footer {
 
     #spotify-container {
         flex-direction: column;
-    }
-
-    .spotify-track {
-        width: 100%;
+        align-items: center;
     }
 
     footer {

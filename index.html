@@ -66,7 +66,12 @@
         </footer>
         <template id="spotify-track">
             <div class="spotify-track">
-                <img class="spotify-album-img" />
+                <div style="position: relative">
+                    <div style="position: absolute;right: -5px;top: 5px;">
+                        <a class="spotify-logo-link" target="_blank" rel="noopener noreferrer"><img src="static/svg/Spotify_logo_without_text.svg" alt="spotify link"></a>
+                    </div>
+                    <img class="spotify-album-img" />
+                </div>
                 <div class="spotify-song"></div>
                 <div class="spotify-artist"></div>
                 <div class="spotify-album"></div>
@@ -102,6 +107,7 @@
                         clone.querySelector('.spotify-song').innerHTML = track.name
                         clone.querySelector('.spotify-album').innerHTML = "on: " + track.album
                         clone.querySelector('.spotify-artist').innerHTML = "by: " + track.artists.map(x => x.name).reduce((x, y) => x + " & " + y)
+                        clone.querySelector('.spotify-logo-link').setAttribute("href", track.spotify_url);
                         var albumImg = clone.querySelector('.spotify-album-img');
                         albumImg.setAttribute("src","data:image/jpg;base64," + track.album_art_encoded);
                         albumImg.setAttribute("alt","Album cover for: " + track.album);
