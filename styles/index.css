@@ -89,7 +89,6 @@ main {
 
 .icon {
     font-size: 1.7rem;
-    color: rgb(28, 32, 32);
     margin: 0 5px;
     text-decoration: none;
 }
@@ -111,7 +110,7 @@ footer {
     color: #c2d2da;
 }
 
-#spotify-header {
+#spotify-header, #spotify-footer {
     margin: 10px;
     font-size: 12px;
     color: #95a3ab;
@@ -121,19 +120,58 @@ footer {
     font-size: 12px;
     margin: 10px;
     width: 175px;
-    color: #95a3ab;
+    color: #272727;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .spotify-album-img {
     height: 150px;
     width: 150px;
+    transform: rotateY(0deg);
+    transform-origin: 0 0;
+    box-sizing: border-box;
+    transition: transform 1s ease-in-out;
+    z-index: 100;
+}
+
+.spotify-album-paper {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: rgb(214, 194, 165);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top:0;
+    overflow: hidden;
+}
+
+.album-hover-target:hover .spotify-album-img {
+    transform: rotateY(-120deg) skewY(-5deg);
+}
+
+.spotify-link {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #1ED760;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    font-size: 16px;
+    text-align: left;
+    margin: 10px;
+    width: 140px;
+    border-radius: 5px 15px 15px 5px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .spotify-song {
-    font-size: 15px;
+    font-size: 20px;
     margin: 5px;
 }
 
