@@ -130,7 +130,7 @@ footer {
 .spotify-album-img {
     height: 150px;
     width: 150px;
-    transform: rotateY(0deg);
+    transform: rotateY(-10deg) skewY(-1.5deg);
     transform-origin: 0 0;
     box-sizing: border-box;
     transition: transform 1s ease-in-out;
