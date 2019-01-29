@@ -3,8 +3,6 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox
 // Precaching html, basic css, and portrait.
 workbox.precaching.precacheAndRoute([
     { url: '/styles/index.css', revision: 2},
-    { url: '/static/img/headshot_dithered_transparent.png', revision: 1},
-    { url: '/static/svg/Google_2015_logo.svg', revision: 1},
     { url: '/index.html', revision: 3},
     { url: '/spotify.min.js', revision: 1},
 ]);
