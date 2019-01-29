@@ -5,7 +5,8 @@ workbox.precaching.precacheAndRoute([
     { url: '/styles/index.css', revision: 2},
     { url: '/static/img/headshot_dithered_transparent.png', revision: 1},
     { url: '/static/svg/Google_2015_logo.svg', revision: 1},
-    { url: '/index.html', revision: 2},
+    { url: '/index.html', revision: 3},
+    { url: '/spotify.min.js', revision: 1},
 ]);
 
 // Offline analytics, because why not.
