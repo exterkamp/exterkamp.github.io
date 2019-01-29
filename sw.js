@@ -2,9 +2,10 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.1/workbox
 
 // Precaching html, basic css, and portrait.
 workbox.precaching.precacheAndRoute([
-    '/styles/index.css',
-    '/static/img/headshot_dithered_transparent.png',
-    { url: '/index.html'},
+    { url: '/styles/index.css', revision: 2},
+    { url: '/static/img/headshot_dithered_transparent.png', revision: 1},
+    { url: '/static/svg/Google_2015_logo.svg', revision: 1},
+    { url: '/index.html', revision: 2},
 ]);
 
 // Offline analytics, because why not.
@@ -35,8 +36,8 @@ workbox.routing.registerRoute(
         cacheName: 'image-cache',
         plugins: [
         new workbox.expiration.Plugin({
-            // Cache all 7 images.
-            maxEntries: 7,
+            // Cache all 9 images.
+            maxEntries: 9,
             // Cache for just 1 day, I won't steal your memory for too long.
             maxAgeSeconds: 1 * 24 * 60 * 60,
         })
