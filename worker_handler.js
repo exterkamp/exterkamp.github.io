@@ -52,7 +52,6 @@ if (window.Worker) {
         let uris = container.querySelectorAll('#spotify-uri')
         let uri_list = [];
         uris.forEach(function(uri){
-            console.log(uri)
             uri_list.push(uri.innerHTML);
         });
         let count = uris.length
