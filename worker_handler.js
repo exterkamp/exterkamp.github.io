@@ -68,7 +68,6 @@ if (window.Worker) {
         if (uris.length < 5) {
             let uri_list = [];
             uris.forEach(function(uri){
-                console.log(uri)
                 uri_list.push(uri.innerHTML);
             });
             // container.innerHTML = ""
@@ -81,7 +80,6 @@ if (window.Worker) {
         // delete current track
         let container = document.querySelector("#spotify-container");
         let tracks = container.querySelectorAll('.spotify-track')
-        console.log(tracks.length)
         if (tracks.length > 1) {
             container.removeChild(tracks[tracks.length-1])
         }
