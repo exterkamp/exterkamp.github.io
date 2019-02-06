@@ -55,9 +55,15 @@
                 <a class="icon" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/shane-exterkamp"><img src="static/svg/linkedin-icon-1.svg" alt="linkedin link"></a>
                 <a class="icon" target="_blank" rel="noopener noreferrer" href="http://facebook.com/shane.exterkamp"><img src="static/svg/facebook-icon-1.svg" alt="facebook link"></a>
             </div>
-            <div id="spotify-header"></div>
-            <div id="spotify-container" style="display:flex;justify-content:center;"></div>
-            <div id="spotify-footer"></div>
+            <div id="spotify-plugin">
+                <div id="spotify-header"></div>
+                <div id="spotify-container"></div>
+                <div id="spotify-footer">
+                    <a id="spotify-remove" href="#spotify-footer" class="icon"><img src="static/svg/outline-remove-24px.svg" alt="remove album"></a>
+                    <a id="spotify-reload" href="#spotify-footer" class="icon"><img src="static/svg/baseline-refresh-24px.svg" alt="refresh album"></a>
+                    <a id="spotify-add" href="#spotify-footer" class="icon"><img src="static/svg/outline-add-24px.svg" alt="add album"></a>
+                </div>
+            </div>
         </main>
         <footer>
             <p>
@@ -68,6 +74,7 @@
             <div class="spotify-track">
                 <div class="album-hover-target" style="position: relative;width: 150px;height: 150px;">
                     <div class="spotify-album-paper">
+                        <span id="spotify-uri" hidden></span>
                         <div class="spotify-song" style="margin-top:45px;"></div>
                         <div class="spotify-album"></div>
                         <div class="spotify-artist"></div>
