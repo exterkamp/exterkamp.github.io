@@ -135,7 +135,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    animation: appear 0.5s forwards;
 }
 
 .spotify-album-img {
@@ -219,6 +219,25 @@ footer {
         transform: 
         translate3d(0, 100%, 0)
         rotate3d(0, 0, 1, 10deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform-origin: center;
+        transform: 
+        translate3d(0, 50%, 0)
+        rotate3d(0, 0, 1, 0deg);
+        opacity: 0;
+    }
+    80% {
+        transform: 
+        translate3d(0, -10px, 0)
+        rotate3d(0, 0, 1, -5deg);
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
