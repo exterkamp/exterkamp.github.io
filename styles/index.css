@@ -111,6 +111,10 @@ footer {
     color: #c2d2da;
 }
 
+#spotify-plugin {
+    margin-top: 20px;
+}
+
 #spotify-header, #spotify-footer {
     /* margin: 10px; */
     font-size: 12px;
@@ -208,6 +212,7 @@ footer {
         translate3d(0, -60px, 0)
         rotate3d(0, 0, 1, 5deg);
         opacity: 1;
+        
     }
     to {
         opacity: 0;
@@ -218,6 +223,10 @@ footer {
 }
 
 @media only screen and (max-width:600px) { 
+    body {
+        overflow: auto;
+    }
+
     #portrait {
         max-width: 200px;
     }
