@@ -3,6 +3,7 @@ body {
     padding: 0;
     font-family: sans-serif;
     height: 100%;
+    overflow: hidden;
 }
 
 html {
@@ -185,6 +186,35 @@ footer {
 .spotify-song {
     font-size: 20px;
     margin: 5px;
+}
+
+.fall {
+    animation: fall 0.75s forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform-origin: center;
+        opacity: 1;
+    }
+    20% {
+        transform: 
+        translate3d(0, 20px, 0)
+        rotate3d(0, 0, 1, -5deg);
+        opacity: 1;
+    }
+    40%, 45% {
+        transform: 
+        translate3d(0, -60px, 0)
+        rotate3d(0, 0, 1, 5deg);
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: 
+        translate3d(0, 100%, 0)
+        rotate3d(0, 0, 1, 10deg);
+    }
 }
 
 @media only screen and (max-width:600px) { 

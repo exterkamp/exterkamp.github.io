@@ -80,7 +80,14 @@ if (window.Worker) {
         let container = document.querySelector("#spotify-container");
         let tracks = container.querySelectorAll('.spotify-track')
         if (tracks.length > 1) {
-            container.removeChild(tracks[tracks.length-1])
+            // Animate the album away
+            let track = tracks[tracks.length-1]
+            track.classList.add("fall");
+            function removalCb(node) {
+                // Remove the album
+                node.remove();
+            }
+            setTimeout(removalCb, 750, track);
         }
     });
 }
