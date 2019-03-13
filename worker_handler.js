@@ -40,6 +40,9 @@ if (window.Worker) {
             albumImg.setAttribute("alt","Album cover for: " + track.album);
             container.appendChild(clone);
         }
+
+        // remove hidden from spotify-plugin
+        document.querySelector('#spotify-plugin').removeAttribute("hidden");
     }
     
     // postMessage to the SW
