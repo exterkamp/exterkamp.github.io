@@ -1,0 +1,13 @@
+.header-1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.markdown-block {
+    margin: 10px;
+}

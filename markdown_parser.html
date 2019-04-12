@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="styles/markdown.css">
+    <script src="mode/javascript.js"></script>
+    <script src="mode/markdown.js"></script>
+</head>
+<body>
+    <div style="width:50%;height:10vh;position: absolute;left: 0;">
+        <div id="editor"></div>
+    </div>
+    <div style="width:50%;height:100vh;position: absolute;right: 0;">
+        <div id="rendered">
+
+        </div>
+    </div>
+
+    
+    <script>
+        function processLine(line){
+
+            let node = 'div';
+            let classList = ['markdown-block'];
+            let part = line;
+
+            if (line.startsWith("# ")){
+                // add header-1 class
+                classList.push("header-1");
+                part = part.substring(2);
+            } else if (line.startsWith("## ")) {
+                classList.push("header-2");
+                part = part.substring(3);
+            }
+
+            let classListStr = 'class="' + classList.join(' ') + '"';
+
+            let lineHTML = `<${node} ${classListStr}>${part}</${node}>`
+
+            return lineHTML;
+        }
+
+        function processMarkdown(elem, markdown){
+            elem.innerHTML = JSON.stringify(markdown, null, 2);
+        }
+
+        var myCodeMirror = CodeMirror(document.querySelector("#editor"), {
+            value: "# Header\n\n## Header 2\n\nHello World.\nWorld Hello.\n\n* hello\n* world",
+            lineNumbers: true,
+            mode:  "markdown"
+        });
+
+        myCodeMirror.on('change',function(cMirror){
+            processMarkdown(document.querySelector('#rendered'), cMirror.getValue());
+        });
+
+        processMarkdown(document.querySelector('#rendered'), myCodeMirror.getValue());
+    </script>
+</body>
+</html>

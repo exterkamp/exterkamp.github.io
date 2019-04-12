@@ -103,10 +103,9 @@ main {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    right:10px;
-    text-align: right;
+    display: flex;
+  align-items: center;
+  justify-content: center;
     font-size: 0.8rem;
     color: #c2d2da;
 }

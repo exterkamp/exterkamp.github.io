@@ -67,7 +67,7 @@
         </main>
         <footer>
             <p>
-                Handcrafted artisanal &#60;/HTML&#62; just for you.
+                <button>😂</button>
             </p>
         </footer>
         <template id="spotify-track">
@@ -95,6 +95,23 @@
             navigator.serviceWorker.register('/sw.js');
             });
         }
+    </script>
+    <script>
+        let element = document.querySelector('body');
+        element.addEventListener("click", 
+            function(event){
+                console.log(
+                    "clientX: " + event.clientX +
+                    " - clientY: " + event.clientY);
+                let sticker = document.createElement('div');
+                sticker.innerHTML = '😂';
+                sticker.style.position = 'absolute';
+                sticker.style.left = (event.clientX-10) + 'px';
+                sticker.style.top = (event.clientY-10) + 'px';
+                sticker.style.pointerEvents = 'none';
+                sticker.style.zIndex = '-1';
+                document.querySelector('body').appendChild(sticker);
+            });
     </script>
     <script src="worker_handler.js"></script>
     </body>
