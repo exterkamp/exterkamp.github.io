@@ -1,2 +1,17 @@
-- name: Lighthouse CI Action
-  uses: treosh/lighthouse-ci-action@v1
+name: Lighthouse Audit
+on: push
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Audit URLs using Lighthouse and ensure performance budget.
+        uses: treosh/lighthouse-ci-action@v1
+        with:
+          urls: |
+            https://exterkamp.codes/
+      - name: Save results
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-results
+          path: './results'
