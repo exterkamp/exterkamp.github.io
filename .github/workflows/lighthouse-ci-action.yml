@@ -10,11 +10,21 @@ jobs:
         with:
           urls: |
             https://exterkamp.codes/
-            https://www.cnn.com/
-            https://www.apple.com/
-            https://www.buzzfeednews.com/
       - name: Save results
         uses: actions/upload-artifact@master
         with:
           name: lighthouse-results
           path: './results'
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Audit live URL
+      uses: jakejarvis/lighthouse-action@master
+      with:
+        url: 'https://exterkamp.codes'
+    - name: Upload results as an artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: report
+        path: './report'
+
