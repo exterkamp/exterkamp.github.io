@@ -10,9 +10,10 @@ jobs:
         with:
           urls: |
             https://exterkamp.codes/
+          temporaryPublicStorage: true
       - name: Save results
         uses: actions/upload-artifact@master
         with:
           name: lighthouse-results
-          path: './results'
+          path: './.lighthouserc'
 
