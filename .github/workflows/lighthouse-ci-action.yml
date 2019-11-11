@@ -15,5 +15,5 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: lighthouse-results
-          path: './.lighthouserc'
+          path: '.lighthouserc'
 
