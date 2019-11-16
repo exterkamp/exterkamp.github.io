@@ -8,8 +8,7 @@ jobs:
       - name: Audit URLs using Lighthouse and ensure performance budget.
         uses: treosh/lighthouse-ci-action@v2
         with:
-          urls: |
-            https://exterkamp.codes/
+          configPath: .github/config/lighthouserc.json
           temporaryPublicStorage: true
       - name: Save results
         uses: actions/upload-artifact@master
