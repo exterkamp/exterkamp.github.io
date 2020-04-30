@@ -9,4 +9,4 @@ before_install:
 script:
   - echo BUILD PASS
 after_success:
-  - lhci autorun --upload.target=temporary-public-storage # run lighthouse CI against your static site
+  - lhci autorun --upload.serverBaseUrl="https://stark-island-55833.herokuapp.com/app/projects/exterkamp-dot-codes"
