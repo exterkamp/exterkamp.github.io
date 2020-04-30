@@ -9,4 +9,4 @@ before_install:
 script:
   - echo BUILD PASS
 after_success:
-  - lhci autorun --upload.target=temporary-public-storage --upload.serverBaseUrl="https://stark-island-55833.herokuapp.com/app/projects/exterkamp-dot-codes" --upload.token="$LHCI_SERVER_TOKEN"
+  - lhci autorun --upload.serverBaseUrl="https://stark-island-55833.herokuapp.com/app/projects/exterkamp-dot-codes"
