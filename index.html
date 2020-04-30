@@ -34,22 +34,6 @@
         <link rel="stylesheet" href="styles/index.css">
     </head>
     <body>
-          <script>
-            /**
-             * Stall for LHCI.
-             * Stalls the main thread for timeInMs
-             */
-            function stall(timeInMs) {
-              const start = performance.now();
-              while (performance.now() - start < timeInMs) {
-                for (let i = 0; i < 1000000; i++) ;
-              }
-            }
-
-            setTimeout(() => stall(250), 1000); // stall for 250ms, 1 second out
-            setTimeout(() => stall(500), 2000); // stall for 500ms, 2 seconds out
-            setTimeout(() => stall(5000), 5000); // stall for 5000ms, 5 seconds out
-          </script>
         <main>
             <div style="padding: 0 2rem">
                 <h1>
